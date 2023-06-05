@@ -1,8 +1,15 @@
 type Query {
-pets: [Pet]
+	getPets(filter: PetFilter): [Pet]
 }
 
 type Pet {
-name: String
-color: String
+	name: String
+	color: String
+	age: Int
+}
+
+input PetFilter { 
+	name: String
+	color: String
+	age: Int
 }
